@@ -95,6 +95,7 @@ main
 
 .oneclick
   {margin-bottom: 50px;}  
+.oneclick span {cursor: pointer;}
 #one img
   {display: none;
   width: 100%;
