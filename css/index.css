@@ -43,25 +43,29 @@ header
 nav
   {display: flex;
   justify-content: space-between;
-  width: 100vw;
+  align-items: center;
+  width: 100%;
   padding: 0px 30px;
   }
 nav ul
   {display: flex;
-  /* flex-direction: column; */
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  height: 300px;
   text-transform: uppercase;
   font-size: 60px;
   font-size: 3.75vw;
+  flex: 4;
+  padding-right: 30px;
   }
 nav ul li
-  {margin: 20px;
+  {margin: 0 20px;
   font-family: 'TAEBAEKmilkyway';
+  display: flex;
   }
-header img
-  {width: 200px;}
+header p
+  {flex: 1;}
+header p img {width: 100%;}
 
 /* main */
 main
@@ -71,7 +75,7 @@ main
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 120px;
+  font-size: 7.5vw;
   text-align: center;
   color: #fff;
   }
@@ -79,25 +83,25 @@ main
 /* section */
 /* _____________________ONE */
 #one
-  {font-size: 80px;
+  {font-size: 5rem;
   margin: 100px auto;
-  width: 1200px;
-  padding: 50px;
+  width: calc(100% - 20%);
+  padding: 5%;
   border-right: 1px solid #4a006d;
   border-left: 1px solid #9f23d8;
   }
 #one .down
-  {font-size: 80px;}
+  {font-size: 5rem;}
 
 .oneclick
   {margin-bottom: 50px;}  
 #one img
-  {display: block;
+  {display: none;
   width: 100%;
   box-shadow: 3px 3px 7px #00000050;
   }
 .onemore
-  {font-size: 40px;
+  {font-size: 3.5vw;
   text-align: center;
   margin: 30px;
   color:#9f23d8;
@@ -111,23 +115,21 @@ main
   border-radius: 30px;
   }
 
-
 /* _________________________ANI */
 #ani
   {margin: 100px auto;}
 .ani-cover
   {position: relative;}
 #ani video
-  {width: 100vw;
-  } 
+  {width: 100%;} 
 .ani-cover p
   {position: absolute;
   color: #fff;
-  font-size: 80px;
+  font-size: 4.7rem;
   }
 .ani-one
   {left: 0;
-  top: 80px;
+  top: 9%;
   width: 100%;
   height: auto;
   display: flex;
@@ -180,7 +182,7 @@ main
   }
 .ani-two
   {right: 0;
-  bottom: 80px;
+  bottom: 9%;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -195,16 +197,20 @@ main
 #mm
   {width: 100%;
   font-family: 'Nanum Myeongjo';
-  height: 2500px;
+  overflow: hidden;
   }
 .mm-title
-  {font-size: 120px;
-  line-height: 40px;
+  {font-size: 7.5vw;
+  line-height: 3.7vw;
+  transform: translateY(3vh);
   text-align: center;
   margin: auto;
+  position:relative;
   }
 .max
-  {position: absolute; z-index: 200;
+  {position: absolute;
+  font-size: 7.5vw; 
+  z-index: 200;
   background-color:  #397effd5;
   color: #fff;
   line-height: 120px;
@@ -217,22 +223,20 @@ main
   }
 .max-img
   {position: relative;
-  width: 1300px;
-  margin: auto;
+  width: 100%;
   height: 800px;
   }
 .max-img img
   {position: absolute;
   margin: 30px;
   }
+
 .max-img img:nth-child(1)
   {top: 0; left: 10%;
-  z-index: 100;
-  }
+  z-index: 100;}
 .max-img img:nth-child(2)
   {bottom: 20%; right: 0;
-  width: 600px;
-  }
+  width: 600px;}
 .max-img img:nth-child(3)
   {bottom: 0; left: 0;}
 .max-img img:nth-child(4)
@@ -253,7 +257,7 @@ main
   }
 .max-img div:nth-of-type(1)
   {background-color: #000;
-  left: 0; top: 120px;
+  left: 5%; top: 15%;
   color: #fff;
   }
 .max-img div:nth-of-type(2)
@@ -284,9 +288,10 @@ main
   right: 8%;
   top: 16%;
   }
-#mm>div:nth-child(3)
-  {width: 1200px;
+#mm>div:nth-child(4)
+  {width: 100%;
   margin: 40px auto;
+  padding-right: 15%;
   text-align: right;
   font-size: 40px;
   font-family: 'TAEBAEKmilkyway';
@@ -294,7 +299,8 @@ main
 
   #mm p
     {font-size: 45px;
-    width: 1200px;
+    width: 70%;
+    padding-right: 2%;
     margin: auto;
     text-align: right;
     right: 0;
@@ -307,55 +313,29 @@ main
     {content: '';
     position: absolute;
     display: block;
-    width: 100vw;
+    width: 100%;
     height: 2px;
     background-color: #000;
-    right: 220px;
+    right: 300px;
     top: 50%;
     }
 .min
-  {position: relative;
-  width: 1200px;
+  {display: flex;
+  width: 70%;
+  margin: 0 auto 50px;
+  }
+.min>div
+  {display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 30%;
   margin: auto;
   }
-#mm .min div
-  {position: absolute;}
-
+.min>div:nth-child(2)>:nth-child(1)
+  {z-index: 200;}
 #mm .min img {width: 100%;}
-.min>div:nth-of-type(1)
-  {left: 0; top: 0; z-index: 300;
-  width: 360px;
-  }
-.min>div:nth-of-type(2)
-  {left: 31.6%; top: 0;
-  z-index: 300;
-  width: 360px;
-  }
-.min>div:nth-of-type(3)
-  {right: 0; top: 0;
-  width: 435px;
-  }
-.min>div:nth-of-type(4)
-  {left: 0; top: 380px;
-  width: 360px;
-  }
-.min>div:nth-of-type(5)
-  {left: 31.6%;  top: 380px;
-  width: 360px;
-  }
-.min>div:nth-of-type(6)
-  {left: 0; top: 760px;
-  width: 360px;
-  }
-.min>div:nth-of-type(7)
-  {left: 31.6%; top: 875px;
-  width: 440px;
-  }
-.min>div:nth-of-type(8)
-  {right: 0;
-  top: 805px;
-  width: 360px;
-  }
+
+
 /* _____________________________3D */
 #threed
   {background: url(../image/line6.png) center center;
@@ -364,20 +344,23 @@ main
   padding: 50px 0;
   }
 #threed>div
-  {width: 1200px;
+  {width: 70%;
   margin: auto;
   }
-#threed img
-  {width: 280px;}
+
 .expl3
   {display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 50px 0;
+  text-shadow: 0 0 20px #fff;
   }
+.expl3 img
+  {width: 23%;}
 .expl3 span:nth-of-type(1)/* 그래픽 글자 */
   {font-size: 80px;
   margin: 50px 0;
+  text-shadow: 0 0 3px #fff;
   }
 
 .graphy
@@ -414,7 +397,7 @@ main
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   }
-.graphy p:nth-child(5)>img {width: 550px !important;}
+.graphy p:nth-child(5)>img {width: 70% !important;}
 .graphy p:nth-child(6)
   {background-color: #c6d4e7;}
 .graphy p:nth-child(7)
@@ -433,7 +416,7 @@ main
   }
 
 #round .bora
-  {width: 1200px;
+  {width: 80%;
   margin: auto;
   border-left: 1px solid #e3a4f3;
   border-right: 1px solid #e3a4f3;
@@ -441,23 +424,25 @@ main
   display: flex;
   flex-direction: column;
   }
-.bora-flex
+[class*=bora-flex]
   {display: flex;
   justify-content: space-around;
   align-items: center;
   }
-.bora-flex div
-  {font-size: 60px;
+.bora-flex1 img
+  {width: 50%;}
+.bora-flex1 div
+  {font-size: 3.75vw;
   position: relative;
   z-index: 100;
   }
-.bora-flex b
+.bora-flex2 b
   {font-size: 100px;
   position: relative;
   z-index: 100;
   font-weight: normal;
   }
-.bora-flex b:before
+.bora-flex2 b:before
   {content: '';
   position: absolute;
   display: block;
@@ -469,7 +454,7 @@ main
   top: -50px;
   z-index: -100;
   }
-.bora-flex b:after
+.bora-flex2 b:after
   {content: '';
   position: absolute;
   display: block;
@@ -481,7 +466,7 @@ main
   bottom: -20px;
   z-index: -100;
   }
-.bora-flex div:before
+.bora-flex1 div:before
   {content: '';
   position: absolute;
   display: block;
@@ -493,7 +478,7 @@ main
   top: -50px;
   z-index: -100;
   }
-.bora-flex div:after
+.bora-flex1 div:after
   {content: '';
   position: absolute;
   display: block;
@@ -508,7 +493,7 @@ main
 
 #round video
   {border-radius: 500px;
-  width: 600px;
+  width: 50%;
   box-shadow: 1px 1px 20px #aaaaaa80;
   }
 
@@ -520,6 +505,7 @@ footer
   justify-content: center;
   align-items: center;
   padding: 50px;
+  border: 1px solid #000;
   }
   footer img
     {width: 100px;}
@@ -529,23 +515,22 @@ footer
 
 
 @media screen and (min-width: 640px) and (max-width: 768px)
-  {header
-    {margin: 30px 0;}
-  nav ul
+  {nav ul
     {flex-direction: column;
+    justify-content: space-between;
     align-items: start;
-    font-size: 2.5em;
+    font-size: 40px;
+    font-size: 2.5rem;
+    flex: 1.5;
     }
   nav ul li
-    {margin: 0px;}
-  header img
-    {width: 300px;}
+    {margin: 10px 0px;}
   
   /* main */
   main
     {height: 500px;
-    text-align: center;
     color: #8e47ff;
+    font-size: 10vw;
     }
   
   /* section */
@@ -557,21 +542,11 @@ footer
     border: none;
     }
   #one .down
-    {font-size: 60px;}
+    {font-size: 5rem;}
   .oneclick
-    {margin: 30px 20px;}  
-  #one img
-    {width: 100%;
-    box-shadow: 3px 3px 7px #00000050;
-    }
-  .onemore {font-size: 25px;}
+    {margin: 30px 20px;}
   .onepage
-    {text-align: right;
-    margin: 30px 20px;;
-    }
-  #one .video-cover
-    {width: calc(100% - 100px);
-    margin: auto;}
+    {margin: 30px 20px;}
   
   /* _________________________ANI */
   #ani
@@ -580,7 +555,7 @@ footer
     {position: relative;}
   .ani-cover p
     {position: absolute;
-    font-size: 60px;
+    font-size: 3.75rem;
     z-index: 200;
     }
   .ani-cover1, .ani-cover2
@@ -600,8 +575,8 @@ footer
   .ani-cover1:before /* 오른가로 */
     {content: '';
     position: absolute;
-    width: calc(100% - 150px);
-    height: calc(100% - 300px);
+    width: 80%;
+    height: 50%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -621,7 +596,7 @@ footer
     align-items: end;
     }
   .ani-two span:nth-child(1)
-    {font-size: 18px;
+    {font-size: 1.125rem;
     margin-top: 10px;
     }
   
@@ -632,8 +607,8 @@ footer
     height: auto;
     }
   .mm-title
-    {font-size: 70px;
-    line-height: 30px;
+    {font-size: 8.5vw;
+    line-height: 4.3vw;
     }
   .max
     {line-height: 80px;
@@ -642,20 +617,14 @@ footer
     background-color:  #b861ffd5;
     }
   .max-img
-    {width: 100%;
-    height: 700px;
-    border: 1px solid #000;
-    }
-    .max-img img
-      {border: 1px solid #000;
-      }
+    {height: 700px;}
 
   .max-img img:nth-child(1)
     {top: 3%; left: 0;
     z-index: 100;}
-  .max-img img:nth-child(2) {display: none;}
+  .max-img img:nth-child(2) {top: 0%; right: 0;}
   .max-img img:nth-child(3)
-    {top: 5%; right: 0% !important;}
+    {display: none;}
   .max-img img:nth-child(4) {display: none;}
   .max-img img:nth-child(5) {display: none;}
   .max-img img:nth-child(6)
@@ -681,27 +650,23 @@ footer
     top: 16%;
     }
 
-  #mm>div:nth-child(3)
-    {width: 100%;
-    text-align: right;
-    padding: 0 20px 0;
+  #mm>div:nth-child(4)
+    {padding: 0 20px 0;
     font-size: 25px;
     }
   #mm p
     {padding-left: 20px;
-    z-index: 1000;
     width: 100%;
     top: -60px;
     text-align: left;
-    }    
+    }     
     #mm p:before
       {right: 0;
-      width: calc(100vw - 40%);
+      width: 60%;
       }
 
   .min 
-    {position: relative;
-    width: 100%;
+    {width: 100%;
     margin-bottom: 50px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -709,41 +674,26 @@ footer
   #mm .min img
     {width: 100%;}
   #mm .min div
-    {position: relative;
-/*     border: 1px solid #000; */
-    width: 100%;
-    left: 0;
-    top: 0;
-    }
-  .min div:nth-of-type(3)
+    {width: 100%;}
+  .min>div:nth-child(1)>:nth-child(2)
     {display: none;}
-  .min div:nth-of-type(5)
+  .min>div:nth-child(2)>:nth-child(2)
     {display: none;}
-  .min div:nth-of-type(6)
-    {display: none;}
-  .min div:nth-of-type(8)
+  .min>div:nth-child(3)
     {display: none;}
 
   /* _____________________________3D */
-  #threed
-    {background: url(../image/line6.png) center center;
-    background-size: 580px; 
-    background-color: #fbfeff; 
-    padding: 50px 0;
-    }
   #threed>div
     {width: 100%;}
-  #threed .expl3 img
-    {width: 150px;}
+  .expl3 img
+    {width: 20%;}
   .expl3
-    {display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    {flex-direction: column;
     margin: auto;
     }
   .expl3 span:nth-of-type(2)
-    {margin: 0 0 30px 0; text-align: center;
+    {margin: 0 0 30px 0; 
+    text-align: center;
     }
   .graphy
     {width: 100%;
@@ -758,16 +708,13 @@ footer
     }  
   .graphy p:nth-child(5)
     {grid-area: span 1/span 1;
-    height: 150px;
     width: 95%;
-    background-color: rgba(0, 123, 254, 0.308);
+    background-color: rgba(254, 0, 157, 0.181);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(3px);
-    }
-
-  
+    }  
   .graphy p:nth-child(5)>img {width: 90% !important;}
-  .graphy p:nth-child(7)>img {width: 100% !important;}
+
 
   /* __________________________BORA */
   #round
@@ -836,7 +783,7 @@ footer
     }
   }
 
-/* 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 */
+/* 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 */
 
 @media screen and (max-width: 639px)
   {.btn_top
@@ -1181,6 +1128,6 @@ footer
     box-shadow: 1px 1px 20px #aaaaaa80;
     }
 
-  footer{padding-bottom: 100px;}
+  /* footer{padding-bottom: 100px;} */
   
   }
